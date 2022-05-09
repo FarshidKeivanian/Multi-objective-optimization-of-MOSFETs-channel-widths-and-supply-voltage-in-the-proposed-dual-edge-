@@ -1,0 +1,52 @@
+[System]
+Name='Fuzzy_NSGA2_FIS'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=6
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='itnormalized'
+Range=[0 1]
+NumMFs=3
+MF1='low':'trapmf',[-0.36 -0.093 0.19973544973545 0.345]
+MF2='medium':'trapmf',[0.29 0.4 0.6 0.71]
+MF3='high':'trapmf',[0.6601 0.8 0.998 1.33]
+
+[Input2]
+Name='BestCostnormalized'
+Range=[0 1]
+NumMFs=3
+MF1='low':'trapmf',[-0.36 -0.093 0.1997 0.345]
+MF2='medium':'trapmf',[0.260645502645503 0.370645502645503 0.570645502645503 0.680645502645503]
+MF3='high':'trapmf',[0.604497354497354 0.755 0.998 1.33]
+
+[Output1]
+Name='pMutation'
+Range=[0 1]
+NumMFs=3
+MF1='low':'trapmf',[-0.36 -0.04 0.197089947089947 0.36]
+MF2='medium':'trapmf',[0.14 0.34 0.681216931216931 0.86]
+MF3='high':'trapmf',[0.702380952380952 0.903 1.04 1.36]
+
+[Output2]
+Name='pCrossover'
+Range=[0 1]
+NumMFs=3
+MF1='Low':'trapmf',[-0.36 -0.04 0.19973544973545 0.36]
+MF2='Medium':'trapmf',[0.14 0.303 0.691798941798942 0.86]
+MF3='High':'trapmf',[0.64 0.903439153439153 1.04 1.36]
+
+[Rules]
+1 3, 3 1 (1) : 1
+2 2, 3 1 (1) : 1
+3 1, 1 3 (1) : 1
+1 1, 1 3 (1) : 1
+1 2, 3 1 (1) : 1
+3 2, 3 1 (1) : 1
