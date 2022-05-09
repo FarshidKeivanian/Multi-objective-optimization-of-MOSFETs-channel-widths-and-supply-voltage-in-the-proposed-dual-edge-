@@ -1,6 +1,0 @@
-$DATA1 SOURCE='HSPICE' VERSION='A-2007.09'
-.TITLE '* optimization of dual edge triggered d flip-flop : standard and good'
- tplh             tphl             tpd              avgpower          
- temper           alter#            
- -3.270e-08       -7.187e-08        5.228e-08        1.843e-04        
-   27.0000           1.0000         
